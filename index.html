@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/baseline-status@1.0.4/baseline-status.min.js" defer></script>
+
+        <script src="js/gsap/gsap.min.js" defer></script>
+        <script src="js/gsap/ScrollTrigger.min.js" defer></script>
+
+        <script src="js/nav.js" defer></script>
+        <script src="js/animate-text.js" defer></script>
+        <script src="js/card-scroll.js" defer></script>
+        <!-- <script src="js/parallax.js" defer></script> -->
+        <script src="js/accordion.js" defer></script>
+        <!-- <script src="js/horizontal-scroll.js"></script> -->
+        <script src="js/increase-number.js" defer></script>
+        <!-- <script src="js/slider.js" defer></script>
+        <script src="js/button-to-top.js" defer></script> -->
+
+        <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+        <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+
+        <script src="js/swiper.js" defer></script>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/nebo.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Учебный центр "Мир шитья"</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__wrapper container">
+                <div class="header__logo-container">
+                    <button class="burger" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="header__logo-info">
+                        <div class="header__logo-wrap">
+                            <img src="./img/logo.jpg" alt="Логотип Мир шитья" />
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="header__logo-info">
+                        <div class="header__logo-wrap">
+                            <img src="./img/logo.jpg" alt="Логотип Мир шитья" />
+                        </div>
+                    </div>
+                    <div class="nav__content-wrapper">
+                        <div class="nav__links-list">
+                            <a href="#about" class="nav__link">Курсы</a>
+                            <a href="#services" class="nav__link">Онлайн-курсы</a>
+                            <a href="#cases" class="nav__link">Мастер-классы</a>
+                            <a href="#reviews" class="nav__link">Расписание</a>
+                            <a href="#reviews" class="nav__link">Контакты</a>
+                            <a href="#reviews" class="nav__link">Аренда</a>
+                            <button class="header__button button button_white" data-popup-target="project-discuss">
+                                <span class="button__text">Обратный звонок</span>
+                            </button>
+                        </div>
+                        <div class="nav__socials socials">
+                            <a href="https://vk.com/quiltclub_msk" class="socials__link" target="_blank">
+                                <img src="./img/vk.png" alt="Иконка ВКонтакте" />
+                            </a>
+                            <a href="https://t.me/+79030055027" class="socials__link" target="_blank">
+                                <img src="./img/tg.png" alt="Иконка Телеграм" />
+                            </a>
+                            <a href="https://wa.me/+79165520343" class="socials__link" target="_blank">
+                                <img src="./img/wa.png" alt="Иконка Whats App" />
+                            </a>
+                            <a href="tel:+7 (499) 265-04-26" class="socials__link" target="_blank">
+                                <img src="./img/phone.png" alt="Иконка телефонной трубки" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="top">
+                <div class="top__wrapper container">
+                    <div class="top__block">
+                        <h1 class="top__title">
+                            Место, где шитье <br />
+                            становится ИСКУССТВОМ<br />
+                        </h1>
+                        <div id="container" class="top__text-animate text-animate">
+                            <span class="top__text-top"></span>
+                            <span class="top__text-bottom"></span>
+                        </div>
+
+                        <svg id="filters" class="top__filters">
+                            <defs>
+                                <filter id="threshold">
+                                    <feColorMatrix
+                                        in="SourceGraphic"
+                                        type="matrix"
+                                        values="1 0 0 0 0
+                                        0 1 0 0 0
+                                        0 0 1 0 0
+                                        0 0 0 255 -140"
+                                    />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div class="about__container container">
+                    <div class="about__wrapper">
+                        <div class="about__img-wrap">
+                            <picture>
+                                <!-- <source srcset="img/papin-main.avif" type="image/avif" /> -->
+                                <!-- <source srcset="img/papin-main.webp" type="image/webp" /> -->
+                                <img src="./img/tailors.jpg" loading="lazy" alt="Фотография швей" class="about__img" />
+                            </picture>
+                        </div>
+                        <div class="about__description">
+                            <div class="about__text-wrapper">
+                                <h2 class="about__title second-title">Школа шитья и рукоделия</h2>
+                            </div>
+
+                            <div class="about__text-block">
+                                <span class="about__text"> Твое творческое пространство, место для вдохновения и роста в мире текстиля— здесь! </span>
+                                <span class="about__text"> Ты любишь создавать что-то своими руками, ценишь уникальность и хочешь научиться превращать ткань в произведение искусства?  Добро пожаловать в Учебный центр сети магазинов «Мир Шитья»! Мы в мире творчества с 2010 года и знаем, как раскрыть твой потенциал! </span>
+                            </div>
+                            <div class="about__link-block link-block">
+                                <a href="https://akkarawin-t.systeme.io/papinthaicourse" target="_blank" class="about__link link">Начать учиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="statistics">
+                <div class="container">
+                    <div class="statistics__about">
+                        <div class="statistics__item">
+                            <span class="statistics__number increase-number" data-target="15">0</span>
+                            <span class="statistics__text-statistic">лет опыта преподавания</span>
+                        </div>
+                        <div class="statistics__item">
+                            <div><span class="statistics__number increase-number" data-target="1500">0</span><span class="statistics__number">+</span></div>
+
+                            <span class="statistics__text-statistic">счастливых учеников</span>
+                        </div>
+                        <div class="statistics__item">
+                            <div><span class="statistics__number increase-number" data-target="300">0</span><span class="statistics__number">+</span></div>
+                            <span class="statistics__text-statistic">успешно проведенных мастер-классов</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="awaits">
+                <div class="awaits__container container">
+                    <h2 class="awaits__title second-title">Что тебя ждет?</h2>
+                    <div class="awaits__wrapper">
+                        <div class="awaits__cards">
+                            <div class="awaits__card-wrapper">
+                                <div class="awaits__card">
+                                    <div class="awaits__description">
+                                        <h3 class="awaits__block-title third-title">Курсы и мастер-классы по лоскутному шитью</h3>
+                                        <p>Открой для себя искусство пэчворка — от базовых основ до авторских методик. Мы обучаем как классическим техникам, так и современным трендам, используем лучшие материалы и практические методы. Тебя ждут занятия в уютной студии, вдохновляющей на творчество, и поддержка опытных наставников. Подходит для любого уровня подготовки — от новичков до мастеров.</p>
+                                    </div>
+                                    <div class="awaits__img-wrap">
+                                        <img src="./img/tailors.jpg" alt="Картинка 1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="awaits__card-wrapper">
+                                <div class="awaits__card">
+                                    <div class="awaits__description">
+                                        <h3 class="awaits__block-title third-title">Пошив одежды, кукол Тильда, сумок и аксессуаров</h3>
+                                        <p>Создавай стильное, уникальное и практичное своими руками. Наши курсы научат шить одежду на заказ, изготавливать интерьерных кукол, сумки и аксессуары, отражающие твой характер. Получи профессиональные навыки, проработай стиль и создай свой первый авторский проект — от идеи до готового изделия.</p>
+                                    </div>
+                                    <div class="awaits__img-wrap">
+                                        <img src="./img/tailors.jpg" alt="Картинка 1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="awaits__card-wrapper">
+                                <div class="awaits__card">
+                                    <div class="awaits__description">
+                                        <h3 class="awaits__block-title third-title">Обучение работе на швейных, вышивальных и вязальных машинах</h3>
+                                        <p>Современное оборудование раскрывает новые возможности для твоего творчества. Ты освоишь не только швейную технику, но и научишься использовать вышивальные и вязальные машины — легко, грамотно и уверенно. Для каждого слушателя — индивидуальное рабочее место, профессиональная техника и сопровождение преподавателя на каждом этапе.</p>
+                                    </div>
+                                    <div class="awaits__img-wrap">
+                                        <img src="./img/tailors.jpg" alt="Картинка 1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="awaits__card-wrapper">
+                                <div class="awaits__card">
+                                    <div class="awaits__description">
+                                        <h3 class="awaits__block-title third-title">Презентации новинок, творческие встречи, атмосфера сообщества</h3>
+                                        <p>Будь в центре событий — участвуй в презентациях новинок, вдохновляйся опытом мастеров, общайся с единомышленниками. Наш учебный центр — это не просто обучение, это живое творческое сообщество. Здесь проходят встречи с известными квилтистами, обсуждаются новые материалы, проходят творческие конкурсы и мини-выставки. Учёба превращается в праздник.</p>
+                                    </div>
+                                    <div class="awaits__img-wrap">
+                                        <img src="./img/tailors.jpg" alt="Картинка 1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-catalog">
+                <div class="main-catalog__container container">
+                    <h2 class="main-catalog__title second-title">Каталог</h2>
+                    <div class="main-catalog__cards">
+                        <div class="main-catalog__card">
+                            <div class="main-catalog__item nebo">
+                                <img src="./img/tailors.jpg" alt="Background Image" class="main-catalog__background-img" />
+                                <span class="main-catalog__step">Курсы</span>
+                                <ul class="main-catalog__sublist">
+                                    <li class="main-catalog__subitem">Перейдите на сайт LMS.</li>
+                                    <li class="main-catalog__subitem">Введите <span class="main-catalog__highlight">логин</span> и <span class="main-catalog__highlight">пароль</span> (выдаются при регистрации).</li>
+                                    <li class="main-catalog__subitem">Нажмите <span class="main-catalog__highlight">«Войти»</span>.</li>
+                                </ul>
+                            </div>
+                            <div class="main-catalog__count">
+                                <div class="main-catalog__count-num">1</div>
+                            </div>
+                        </div>
+
+                        <div class="main-catalog__card">
+                            <div class="main-catalog__item nebo">
+                                <img src="./img/tailors.jpg" alt="Background Image" class="main-catalog__background-img" />
+                                <span class="main-catalog__step">Онлайн-курсы</span>
+                                <ul class="main-catalog__sublist">
+                                    <li class="main-catalog__subitem">В разделе <span class="main-catalog__highlight">«Мои курсы»</span> выберите нужный курс.</li>
+                                    <li class="main-catalog__subitem">Открывайте модули, изучайте материалы и выполняйте задания.</li>
+                                </ul>
+                            </div>
+                            <div class="main-catalog__count">
+                                <div class="main-catalog__count-num">2</div>
+                            </div>
+                        </div>
+
+                        <div class="main-catalog__card">
+                            <div class="main-catalog__item nebo">
+                                <img src="./img/tailors.jpg" alt="Background Image" class="main-catalog__background-img" />
+                                <span class="main-catalog__step">Мастер-классы</span>
+                                <ul class="main-catalog__sublist">
+                                    <li class="main-catalog__subitem">В разделе <span class="main-catalog__highlight">«Успеваемость»</span> вы увидите свои баллы и обратную связь от преподавателей.</li>
+                                </ul>
+                            </div>
+                            <div class="main-catalog__count">
+                                <div class="main-catalog__count-num">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="teachers">
+                <div class="teachers__container container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                            <div class="swiper-slide">Slide 6</div>
+                            <div class="swiper-slide">Slide 7</div>
+                            <div class="swiper-slide">Slide 8</div>
+                            <div class="swiper-slide">Slide 9</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inspiration">
+                <div class="inspiration__container container">
+                    <h2 class="inspiration__title second-title">Здесь рождается вдохновение</h2>
+                    <div class="inspiration__blocks">
+                        <div class="inspiration__block">
+                            <!-- Вставить ссылку на магазин -->
+                            <p>У нас ты не просто учишься — ты находишь единомышленников, заряжаешься энергией и воплощаешь свои идеи в жизнь. Хочешь прокачать навыки, начать творческий путь или просто приятно и с пользой провести время — загляни к нам! А всё необходимое — ткани, инструменты, аксессуары — найдешь прямо в магазине «Мир Шитья» рядом с учебным классом.</p>
+                            <a href="courses.html">Выбрать курс</a>
+                        </div>
+                        <div class="inspiration__block">
+                            <div class="inspiration__img-wrap">
+                                <!-- Заменить на видео? -->
+                                <img src="./img/tailors.jpg" alt="Картинка швей" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="choose">
+                <div class="choose__container container">
+                    <h2 class="choose__title second-title">Почему мы?</h2>
+                    <div class="choose__blocks">
+                        <div class="choose__block">
+                            <div class="choose__img-wrap">
+                                <img src="./img/tailors.jpg" alt="Картинка швей" />
+                            </div>
+                            <div class="choose__description"><span class="choose__accent">Комфорт и доступность</span>— уютный класс в центре города, рядом с метро, удобно добираться из любой точки</div>
+                        </div>
+
+                        <div class="choose__block">
+                            <div class="choose__img-wrap">
+                                <img src="./img/tailors.jpg" alt="Картинка швей" />
+                            </div>
+                            <div class="choose__description"><span class="choose__accent">Современное оснащение</span>— всё необходимое оборудование для полноценного творческого процесса</div>
+                        </div>
+
+                        <div class="choose__block">
+                            <div class="choose__img-wrap">
+                                <img src="./img/tailors.jpg" alt="Картинка швей" />
+                            </div>
+                            <div class="choose__description"><span class="choose__accent">Опытные наставники</span>— преподаватели с профессиональным подходом и любовью к своему делу</div>
+                        </div>
+
+                        <div class="choose__block">
+                            <div class="choose__img-wrap">
+                                <img src="./img/tailors.jpg" alt="Картинка швей" />
+                            </div>
+                            <div class="choose__description"><span class="choose__accent">Гибкий график и привилегии</span>— занятия проходят ежедневно в удобное время, а ученики получают приятные скидки</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="questions" id="faq">
+                <div class="questions__wrap container">
+                    <h2 class="questions__title second-title">Вопрос/ответ</h2>
+                    <div class="questions__block">
+                        <ul class="questions__list">
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">How long does it take to start speaking Thai? I want to start speaking Thai as soon as possible! How long does it usually take for your students to start talking?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> It depends on your level, the number of lessons, and how much you practice on your own. Most of my students can confidently use basic phrases and understand simple dialogues within 1-2 months. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Is your course suitable for beginners? I have no knowledge of Thai at all. Do you teach complete beginners, or do I need some basic skills?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> Of course! The course is designed for everyone, even if you have never studied Thai before. I explain the basics step by step, help with pronunciation, and provide effective memorization techniques. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">How are the lessons structured? What is a typical lesson like? Do we focus more on speaking, grammar, or exercises?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text questions__text_position"> We practice a lot of speaking, go through grammar, work on pronunciation, and listen to real Thai speech. I tailor the materials to your level and goals. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Can I take lessons at a convenient time? My schedule is unpredictable. Can I adjust the lesson times to fit my routine?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> Yes, the schedule is flexible, and we can find a time that works best for you. If your schedule changes, we can always reschedule lessons. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Do you give homework? I want to practice between lessons. Will I have any homework?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> Yes, but it won’t be boring exercises! I give engaging tasks that help you learn faster—listening to Thai, repeating phrases, watching videos, or doing small speaking challenges. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Will I be able to travel in Thailand without problems after your course? I want to visit Thailand and feel confident communicating in shops, cafes, and on the streets. Will I be able to do that after your course?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> Absolutely! I teach practical, real-life Thai that will help you navigate cities, order food, ask for directions, and interact with locals. </span>
+                                </div>
+                            </li>
+
+                            <li class="questions__item">
+                                <a class="questions__expand">
+                                    <p class="questions__question">Do you teach only online, or are in-person lessons available? Can we meet in person for lessons, or are they only online?</p>
+                                    <div class="questions__arrow">+</div>
+                                </a>
+
+                                <div class="questions__answer">
+                                    <span class="questions__text"> Right now, I only teach online, but it’s actually more convenient—you can learn from anywhere, and all materials are easily accessible. </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
