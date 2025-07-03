@@ -5,7 +5,7 @@ const elts = {
     textBottom: document.querySelector('.top__text-bottom'),
 };
 
-const texts = ['Speak', 'Explore', 'Grow', 'Master', 'Enjoy', 'Improve', 'Achieve'];
+const texts = ['Вдохновляйся', 'Фантазируй', 'Учись', 'Воплощай', 'Чувствуй', 'Совершенствуйся', 'Создавай'];
 
 const morphTime = 1;
 const cooldownTime = 0.25;

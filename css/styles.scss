@@ -199,11 +199,20 @@ body {
     z-index: 99999;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     transform: translateY(0);
+    margin-top: calc(var(--scale) * 3);
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         gap: 20px;
+        background-color: var(--beige);
+        border-radius: 30px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.057);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
     }
 
     &__logo-info {
@@ -217,7 +226,7 @@ body {
     }
 
     &__logo-wrap {
-        max-width: 180px;
+        max-width: 120px;
     }
 
     &__logo-container {
@@ -329,27 +338,37 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
     width: 100%;
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__callback {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
     &__links-list {
+        font-size: 20px;
         display: flex;
         align-items: center;
         align-self: center;
-        gap: 5px;
-        background-color: var(--white);
+        gap: 20px;
         border-radius: 50px;
     }
 
     &__link {
         font-family: var(--font-family);
         font-weight: 500;
-        color: grey;
-        background-color: var(--lightest);
-        border-radius: 50px;
-    }
-
-    &__link {
-        padding: 10px 20px;
+        color: var(--beige);
+        text-transform: uppercase;
+        padding: 10px 0;
     }
 
     &__content-wrapper {
@@ -469,7 +488,7 @@ body {
         gap: 20px;
         overflow: hidden;
         margin: 0 auto;
-        // padding-left: calc(var(--scale) * 49);
+        padding-left: calc(var(--scale) * 49);
     }
 
     &__block {
@@ -846,12 +865,17 @@ body {
 
 .inspiration {
     &__blocks {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__block {
+        flex: 1;
     }
 
     &__img-wrap {
-        max-width: 600px;
+        max-width: 880px;
     }
 }
 
