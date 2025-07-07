@@ -212,7 +212,6 @@ body {
         border: 2px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(10px);
-        overflow: hidden;
     }
 
     &__logo-info {
@@ -408,10 +407,10 @@ body {
 @media (max-width: 1024px) {
     .nav {
         position: fixed;
-        top: 0;
-        right: -100%;
+        top: -1000%;
+        right: -0;
         width: 65%;
-        transition: right 0.3s ease;
+        transition: top 0.3s ease;
         z-index: 1000;
         display: flex;
         flex-direction: column;
@@ -421,7 +420,7 @@ body {
         border-bottom-left-radius: 40px;
 
         &.active {
-            right: 0;
+            top: 0;
         }
 
         &__links-list {
