@@ -298,6 +298,8 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  color: var(--beige);
+  font-size: 20px;
 }
 .nav__links-list {
   font-size: 20px;
@@ -316,8 +318,12 @@ body {
 }
 .nav__content-wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
+}
+.nav__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media (max-width: 1440px) {
@@ -389,23 +395,11 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--dark-grey);
-  background: url(../img/bkk.jpg) no-repeat 50% 50%;
+  background: url(../img/main-banner.jpg) no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
   top: 0;
   padding-top: 100px;
-}
-@supports (background-image: url("bkk.avif")) {
-  .top {
-    background-image: url("../img/bkk.avif");
-  }
-}
-@supports not (background-image: url("bkk.avif")) {
-  @supports (background-image: url("bkk.webp")) {
-    .top {
-      background-image: url("../img/bkk.webp");
-    }
-  }
 }
 .top__wrapper {
   position: relative;
@@ -441,11 +435,16 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
+.top__accent {
+  color: #ff8105;
+  text-transform: uppercase;
+}
 
 /* Socials */
 .socials {
   display: flex;
   align-items: center;
+  align-self: flex-end;
   gap: 10px;
 }
 .socials__link {
@@ -564,7 +563,6 @@ body {
   font-size: 30px;
   border-radius: var(--border-radius);
   color: black;
-  background: linear-gradient(165.72deg, #f7bdf8 21.15%, #cd237f 81.93%);
 }
 .awaits__img-wrap {
   max-width: 400px;
@@ -588,7 +586,7 @@ body {
   max-width: 700px;
 }
 .main-catalog__card:not(:first-child) {
-  min-height: 286px;
+  min-height: 440px;
 }
 .main-catalog__card:nth-child(2) {
   grid-column: 2;
@@ -599,6 +597,8 @@ body {
   grid-row: 2;
 }
 .main-catalog__item {
+  color: var(--beige);
+  align-content: flex-end;
   position: relative;
   border-radius: 20px;
   height: 100%;
@@ -711,6 +711,7 @@ body {
     min-height: 150px;
   }
 }
+/* Teachers */
 /* Inspiration */
 .inspiration__blocks {
   display: flex;
@@ -835,4 +836,53 @@ body {
 }
 .questions__link:hover {
   text-decoration: underline;
+}
+
+/* horizontal scroll */
+#horizontal-scoll {
+  padding: 200px 0;
+}
+
+.horizontal-scoll-wrapper {
+  overflow: hidden;
+  height: 525px;
+}
+
+.horizontal {
+  display: flex;
+  height: 100%;
+}
+
+.horizontal > div {
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 5px;
+}
+
+.horizontal > div:first-child {
+  padding: 0 5px 0 15px;
+}
+
+.horizontal > div:last-child {
+  padding: 0 15px 0 5px;
+}
+
+.horizontal .card {
+  align-items: stretch;
+  width: 540px;
+  padding: 50px 40px;
+  background: #6e4ce1;
+  border-radius: 38px;
+  color: #f6f2e8;
+}
+
+.horizontal-scroll-outer {
+  padding: 100px 0; /* показываем секции сверху и снизу */
+  position: relative;
+}
+
+.horizontal-scroll-inner {
+  height: 525px;
+  overflow: hidden;
+  position: relative;
 }/*# sourceMappingURL=styles.css.map */

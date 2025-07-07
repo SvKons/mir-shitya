@@ -10,6 +10,7 @@
 
         <script src="js/gsap/gsap.min.js" defer></script>
         <script src="js/gsap/ScrollTrigger.min.js" defer></script>
+        <!-- <script src="js/gsap/ScrollSmoother.min.js" defer></script> -->
 
         <script src="js/nav.js" defer></script>
         <script src="js/animate-text.js" defer></script>
@@ -52,35 +53,37 @@
                             <div class="header__logo-wrap">
                                 <img src="./img/logo.jpg" alt="Логотип Мир шитья" />
                             </div>
+                            <div class="nav__links-list">
+                                <a href="#about" class="nav__link">Курсы</a>
+                                <a href="#services" class="nav__link">Онлайн-курсы</a>
+                                <a href="#cases" class="nav__link">Мастер-классы</a>
+                                <a href="#reviews" class="nav__link">Расписание</a>
+                                <a href="#reviews" class="nav__link">Контакты</a>
+                                <a href="#reviews" class="nav__link">Аренда</a>
+                            </div>
                         </div>
-                        <div class="nav__callback">
-                            <a href="tel:+7 (499) 265-04-26" class="nav__calback-phone" target="_blank"> +7 (499) 265-04-26 </a>
-                            <button class="header__button button button_white" data-popup-target="project-discuss">
-                                <span class="button__text">Обратный звонок</span>
-                            </button>
-                        </div>
-                    </div>
 
-                    <div class="nav__content-wrapper">
-                        <div class="nav__links-list">
-                            <a href="#about" class="nav__link">Курсы</a>
-                            <a href="#services" class="nav__link">Онлайн-курсы</a>
-                            <a href="#cases" class="nav__link">Мастер-классы</a>
-                            <a href="#reviews" class="nav__link">Расписание</a>
-                            <a href="#reviews" class="nav__link">Контакты</a>
-                            <a href="#reviews" class="nav__link">Аренда</a>
-                        </div>
-                        <div class="nav__socials socials">
-                            <a href="https://vk.com/quiltclub_msk" class="socials__link" target="_blank">
-                                <img src="./img/vk.png" alt="Иконка ВКонтакте" />
-                            </a>
-                            <i class="fa fa-vk" aria-hidden="true"></i>
-                            <a href="https://t.me/+79030055027" class="socials__link" target="_blank">
-                                <img src="./img/tg.png" alt="Иконка Телеграм" />
-                            </a>
-                            <a href="https://wa.me/+79165520343" class="socials__link" target="_blank">
-                                <img src="./img/wa.png" alt="Иконка Whats App" />
-                            </a>
+                        <div class="nav__content-wrapper">
+                            <div class="nav__callback">
+                                <a href="tel:+7 (499) 265-04-26" class="nav__calback-phone" target="_blank"> +7 (499) 265-04-26 </a>
+                            </div>
+                            <div class="nav__socials">
+                                <button class="header__button button button_white" data-popup-target="project-discuss">
+                                    <span class="button__text">Обратный звонок</span>
+                                </button>
+                                <div class="socials">
+                                    <a href="https://vk.com/quiltclub_msk" class="socials__link" target="_blank">
+                                        <img src="./img/vk.png" alt="Иконка ВКонтакте" />
+                                    </a>
+                                    <i class="fa fa-vk" aria-hidden="true"></i>
+                                    <a href="https://t.me/+79030055027" class="socials__link" target="_blank">
+                                        <img src="./img/tg.png" alt="Иконка Телеграм" />
+                                    </a>
+                                    <a href="https://wa.me/+79165520343" class="socials__link" target="_blank">
+                                        <img src="./img/wa.png" alt="Иконка Whats App" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +95,7 @@
                     <div class="top__block">
                         <h1 class="top__title">
                             Место, где шитье <br />
-                            становится ИСКУССТВОМ<br />
+                            становится <span class="top__accent">искусством</span><br />
                         </h1>
                         <div id="container" class="top__text-animate text-animate">
                             <span class="top__text-top"></span>
@@ -134,10 +137,51 @@
 
                             <div class="about__text-block">
                                 <span class="about__text"> Твое творческое пространство, место для вдохновения и роста в мире текстиля— здесь! </span>
-                                <span class="about__text"> Ты любишь создавать что-то своими руками, ценишь уникальность и хочешь научиться превращать ткань в произведение искусства?  Добро пожаловать в Учебный центр сети магазинов «Мир Шитья»! Мы в мире творчества с 2010 года и знаем, как раскрыть твой потенциал! </span>
+                                <span class="about__text"> Ты любишь создавать что-то своими руками, ценишь уникальность и хочешь научиться превращать ткань в произведение искусства? Добро пожаловать в Учебный центр сети магазинов «Мир Шитья»! Мы в мире творчества с 2010 года и знаем, как раскрыть твой потенциал! </span>
                             </div>
                             <div class="about__link-block link-block">
                                 <a href="https://akkarawin-t.systeme.io/papinthaicourse" target="_blank" class="about__link link">Начать учиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="horizontal-scoll">
+                <div class="horizontal-scroll-inner">
+                    <div class="horizontal-container">
+                        <div class="horizontal-scoll-wrapper">
+                            <div class="horizontal">
+                                <div>
+                                    <div class="card">
+                                        <h2>Школа шитья и рукоделия</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h2>Card 2</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h2>Card 3</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h2>Card 4</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h2>Card 5</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="card">
+                                        <h2>Card 6</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -269,19 +313,21 @@
 
             <section class="teachers">
                 <div class="teachers__container container">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
+                    <h2 class="teachers__title second-title">Наши преподаватели</h2>
+                    <div class="teachers__content">
+                        <div class="teachers__text">
+                            <p>Тут текст о преподавателях</p>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="teachers__slider swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./img/tailors.jpg" alt="" /></div>
+                                <div class="swiper-slide"><img src="./img/tailors.jpg" alt="" /></div>
+                                <div class="swiper-slide"><img src="./img/tailors.jpg" alt="" /></div>
+                                <div class="swiper-slide"><img src="./img/tailors.jpg" alt="" /></div>
+                                <div class="swiper-slide"><img src="./img/tailors.jpg" alt="" /></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
             </section>
