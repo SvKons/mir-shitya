@@ -155,7 +155,6 @@ img {
 
 button,
 input {
-    color: currentColor;
     font-family: inherit;
     font-size: inherit;
     border: none;

@@ -55,7 +55,12 @@
 // });
 
 'use strict';
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+    smooth: 1,
+    effects: true,
+});
 
 // 1. Горизонтальный скролл (исправленная версия)
 const horizontalSection = document.querySelector('#horizontal-scoll');
